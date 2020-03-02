@@ -1,0 +1,52 @@
+<!--================================Here we loading the static files by decalring the syntx==================-->
+{% load staticfiles %}
+<!--========================================================================================================-->
+<!DOCTYPE html>
+<html>
+<head>
+<!---===================================Loading the Data from the other page Tag==========================-->
+ <!--==================================Start of the Block Title=========================================-->
+  <title>
+
+  								{% block title %}
+
+
+
+  								{% endblock %}</title>
+<!---===================================Ending of the Block Title=========================-->
+
+<!--=====================================Linking the CSS Files================================-->
+  <link href='{% static "styles/base.css" %}'rel="stylesheet">
+<!--=========================================================================================-->
+<!--========================================================Bootstrap CDN 3.3.7 Version============================================================-->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!--==================================================================================================================================-->
+
+
+</head>
+<body>
+<nav class="navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+   <img src="{% static 'img/Logo.png' %}" alt="" width="170px" height="50px" style="margin-top:5px; margin-bottom:3px;"> <a class="navbar-brand" href="#"></a>
+    </div>
+    <ul class="nav navbar-nav">
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> About Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+  </div>
+<!--==========================Here the content File start which body is field by another body=================-->
+    			{% block content %}
+    				
+
+    				{% endblock %}
+<!--============Here the End of the Block which is filed by another template which inherit this template-->
+  </div>
+
+</body>
+</html>

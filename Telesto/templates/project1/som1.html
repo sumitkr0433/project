@@ -1,0 +1,229 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Startmin - Bootstrap Admin Theme</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- MetisMenu CSS -->
+        <link href="css/metisMenu.min.css" rel="stylesheet">
+
+        <!-- Timeline CSS -->
+        <link href="css/timeline.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="./css/startmin.css" rel="stylesheet">
+
+        <!-- Morris Charts CSS -->
+        <link href="./css/morris.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="./css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+        <!-- MetisMenu CSS -->
+        <link href="{% static 'css/metisMenu.min.css'%}" rel="stylesheet">
+
+        <!-- Timeline CSS -->
+        <link href="{%static 'css/timeline.css'%}" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="{% static 'css/startmin.css'%}" rel="stylesheet">
+
+        <!-- Morris Charts CSS -->
+        <link href="{% static 'css/morris.css' rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="{% static 'css/font-awesome.min.css'%}" rel="stylesheet" type="text/css">
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</style>
+<style>
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+</style>
+<!--==========================================For the Support of the Lower Version of IE--====================================================================================================================-->
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        </head>
+    <body>
+                <div id="wrapper">
+
+<!--======================================Navigation Part Button will added===================================================================-->
+                <nav class="navbar navbar navbar navbar-fixed-top" role="navigation">
+                <!--<div class="navbar-header">-->
+    <!--========================================Titile for navigation=====================================================================-->
+                    <!--<a class="navbar-brand" href="index.html"><font size="30px">Khetra</a></font>
+                </div>-->
+<!--=====================================Toggle Navigation Linking==========================================================================-->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+        <!--=====================================The above two line create the toogle button only=====================================-->
+                    </button>
+                     <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                </button>
+<!--================================================Creating icon at the Left=====================================================================-->
+            <ul class="nav navbar-nav navbar-left navbar-top-links">
+                    <li><a href="#"><font size="4px"><i class="fa fa-home fa-fw"></i> 
+                        <img src="{% static 'img/Logo.png' %}" width="90px"> </a></font></li>
+                </ul>
+<!--===================================================Creating Menu at the Right Hand Side======================================================-->
+             <ul class="nav navbar-right navbar-top-links">
+                    
+<!--============================================Adding all the Drop Down to the bell Icon=========================================================-->
+<!--==============================================Adding All the User Icon========================================================================-->
+                   <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-user fa-fw"></i>About Us<b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                   <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-user fa-fw"></i> Logout <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+               </nav>
+<!---============================================Completed Nav=========================================================-->         <!--Bar===============================================================================-->
+<!--=======================================================Side Bar Making===================================-->
+
+                <div class="navbar-panel-primary sidebar" role="navigation"style="width:280px;">
+                    <div class="sidebar-nav navbar-collapse">
+              <!--Here we define style also-->
+                        <ul class="nav" id="side-menu" >
+                            <li class="sidebar-search">
+                                <div class="input-group custom-search-form">
+<!--=============================================================================SIDE BAR DASH BOARD=====================================-->
+                                <a href="{% url 'dashboard' %}" class="active">Home</a>
+                            </li>
+<!--==================================================================Rates Card========================================================-->
+                 <li>
+                                <a href="{% url 'dashboard' %}"><i class="fa fa-bar-chart-o fa-fw"></i>Upload Swegy File</span></a>
+                  <li>
+                                        <a href="listing.html">Listing</a>
+                                    </li>
+                                </ul>
+                 <li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+<!--==================================================================End of the Rate Card Design==========================================-->
+                            
+<!--==========================================================End of Side Bar============================================-->
+<!--Side Bar Naviagtion end Here-->
+            <div id="page-wrapper" style="margin-left:290px; margin-top:15px;">
+
+
+            <!--Side Bar Naviagtion end Here-->
+<!--============================================================Here we giving the margin from the left==================================-->
+<!-- Navbar -->
+
+</form> 
+<!-- Navbar -->
+<div class="row">
+<nav class="navbar navbar-inverse">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="{% url 'dashboard' %}">Home</a></li>
+      <li><a href="{% url 'uploadswegys' %}">Upload Swegy Files</a></li>
+      <li><a href="{% url 'som' %}">Som</a></li>
+      <li><a href="{% url 'clustering' %}">Clustering</a></li>
+      <li><a href="{% url 'plots' %}">Plots</a></li>
+    </ul>
+</nav>
+</div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1><center><b>Telesto Energy</h1></center>
+                            <center><img src="{% static 'img/Logo.png' %}" width="90px">
+                            </center>
+                        </div>
+                    </div>
+          
+<!--============================================================Here we giving the margin from the left==================================-->
+              <br>
+                      <font size="3px"></li><br>
+    
+          <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-1">
+        {{form.learning_rate}}
+        {{form.epochi}}
+       {{form.som_map_rows}}
+       {{form.som_map_column}}
+
+       {{form.som_map_rows}}
+       {{form.som_map_column}}
+       {{set_of_choices}}
+ 
+</div>
+</div>     
+</div>    
+
+                 
+<!--===============================================================Dashoboard Heading in the Body=====================================-->
+  <!-- /.row -->
+  <!--=============================================================First Heading Listing=====================================-->
+                    
+<!---===================================================Scripting===================================================================-->
+ <!-- jQuery -->
+        <script src="js/jquery.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+		<!-- Metis Menu Plugin JavaScript -->
+        <script src="js/metisMenu.min.js"></script>
+		
+		  <!-- Morris Charts JavaScript -->
+        <script src="js/raphael.min.js"></script>
+		
+		 <script src="js/morris.min.js"></script>
+		<!--====================================================
+        <script src="js/morris-data.js"></script>
+
+        <!-- Custom Theme JavaScript -->
+       
